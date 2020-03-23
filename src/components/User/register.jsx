@@ -2,8 +2,12 @@ import React,{Component} from 'react';
 import Nav from '../Nav/nav';
 import Banner from '../Nav/banner';
 import Footer from '../Footer/footer';
-
+import toastr from 'toastr';
+import 'toastr/build/toastr.css';
 class Register extends Component{
+    constructor(){
+        super();
+    }
     render(){
         return(
             <>
@@ -21,17 +25,23 @@ class Register extends Component{
                                 <label htmlFor="">
                                         Username
                                     </label>
-                                    <input type="text" className="form-control" name="username"/>
+                                    <input type="text" 
+                                    className="form-control" 
+                                    name="username"/>
 
                                     <label htmlFor="">
                                         Enter Email
                                     </label>
-                                    <input type="text" className="form-control" name="email"/>
+                                    <input type="text" 
+                                    className="form-control" 
+                                    name="email"/>
 
                                     <label htmlFor="">
                                         Enter Password
                                     </label>
-                                    <input type="password" className="form-control" name="password"/>
+                                    <input type="password" 
+                                    className="form-control" 
+                                    name="password"/>
                                     <button type="submit" className="btn btn-success"> Login</button>
                                 </form>
                             </div>
