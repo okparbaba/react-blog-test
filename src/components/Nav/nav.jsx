@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import {Link} from 'react-router-dom';
 const Nav=()=>{
     return(
 
@@ -9,9 +8,10 @@ const Nav=()=>{
             <nav className="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
             <div className="container">
                 {/* Brand */}
-                <a className="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+                
+                <Link className="navbar-brand waves-effect" to="/">
                 <strong className="blue-text">MDB</strong>
-                </a>
+                </Link>
                 {/* Collapse */}
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
@@ -26,10 +26,20 @@ const Nav=()=>{
                     </a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
+                    <Link className="nav-link waves-effect"
+                     to="/article/create">Create Article</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank">Free download</a>
+                    <Link className="nav-link waves-effect"
+                    to="/user/login">
+                        Login
+                    </Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link className="nav-link waves-effect"
+                    to="/user/register">
+                        Register
+                    </Link>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free
